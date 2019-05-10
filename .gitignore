@@ -1,0 +1,7 @@
+*.sublime-*
+.idea
+__pycache__
+.cache
+*.pyc
+
+/doc/_build

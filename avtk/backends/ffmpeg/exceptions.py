@@ -1,0 +1,2 @@
+class NoMediaError(Exception):
+    pass
