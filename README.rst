@@ -16,8 +16,8 @@ report bugs, suggest use cases and feature ideas, and any other feedback you mig
 Resources
 ---------
 
-* Python Package Index: https://pypi.org/avtk/
-* Documentation: https://github.com/senko/avtk/
+* Python Package Index: https://pypi.org/project/avtk/
+* Documentation: https://avtk.readthedocs.io/en/latest/
 * Source code: https://github.com/senko/avtk/
 * Bug and feature tracker: https://github.com/senko/avtk/issues
 
