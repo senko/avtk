@@ -25,7 +25,7 @@ def test_get_thumbnail_png(tmpfile):
     fp.write(get_thumbnail(video_path, 2, fmt='png'))
     fp.close()
     diff = compare_images(thumb_path, path)
-    assert diff < 0.1
+    assert diff < 0.5
 
 
 @pytest.mark.slow
@@ -34,7 +34,7 @@ def test_get_thumbnail_jpg(tmpfile):
     fp.write(get_thumbnail(video_path, 2, fmt='jpg'))
     fp.close()
     diff = compare_images(thumb_path, path)
-    assert diff < 0.1
+    assert diff < 0.5
 
 
 @pytest.mark.slow
