@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.3
+    environment:
+      PATH: /home/circleci/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    steps:
+      - checkout
+      - run:
+          name: Install required Python packages
+          command: pip install --user flake8 pytest sphinx sphinx-rtd-theme
+      - run:
+          name: Run linter
+          command: flake8
+      - run:
+          name: Install FFmpeg
+          working_directory: /tmp
+          command: |
+            wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+            tar xf ffmpeg-release-amd64-static.tar.xz
+            cp ffmpeg-*/ff* $HOME/.local/bin
+      - run:
+          name: Run tests
+          command: pytest
+      - run:
+          name: Build documentation
+          working_directory: ~/project/doc
+          command: make html
+      - store_artifacts:
+          path: ~/project/doc/_build/html
+          destination: docs
