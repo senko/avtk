@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Install required Python packages
-          command: pip install --user flake8 pytest sphinx sphinx-rtd-theme
+          command: pip install --user -r requirements.txt
       - run:
           name: Run linter
           command: flake8
