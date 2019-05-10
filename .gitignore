@@ -1,7 +1,10 @@
 *.sublime-*
-.idea
-__pycache__
-.cache
+.idea/
+__pycache__/
+.cache/
 *.pyc
 
-/doc/_build
+/doc/_build/
+*.egg-info/
+/build/
+/dist/

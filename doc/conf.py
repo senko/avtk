@@ -14,15 +14,16 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
+from avtk import VERSION, AUTHOR  # flake8: noqa
 
 # -- Project information -----------------------------------------------------
 
 project = 'avtk'
-copyright = '2019, Senko Rasic'
-author = 'Senko Rasic'
+author = AUTHOR
+copyright = '2019, ' + AUTHOR
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = VERSION
 
 
 # -- General configuration ---------------------------------------------------
