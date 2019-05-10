@@ -18,6 +18,8 @@ from avtk import VERSION, AUTHOR  # flake8: noqa
 
 # -- Project information -----------------------------------------------------
 
+master_doc = 'index'
+
 project = 'avtk'
 author = AUTHOR
 copyright = '2019, ' + AUTHOR
